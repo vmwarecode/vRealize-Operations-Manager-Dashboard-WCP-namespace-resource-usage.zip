@@ -1,0 +1,737 @@
+{
+   "dashboards": [{
+      "adapterName": "VMware vSphere",
+      "autoswitchEnabled": false,
+      "columnCount": 1,
+      "columnProportion": "1",
+      "creationTime": 1587723447761,
+      "dashboardNavigations": {},
+      "description": "\u200bThis dashboard helps to identify the resources used by Namespaces and vSphere pods in a WCP-enabled cluster",
+      "disabled": false,
+      "gridsterMaxColumns": 12,
+      "hidden": true,
+      "homeTab": false,
+      "id": "3aab01e9-25b5-40f5-bdef-bb3d90bef44b",
+      "importAttempts": 0,
+      "importComplete": true,
+      "lastUpdateTime": 1587726659809,
+      "lastUpdateUserId": "202a050e-c178-47f9-8cc7-2046c9318f6d",
+      "locked": false,
+      "name": "WCP: Resource overview by namespace",
+      "namePath": "Inventory",
+      "rank": 0,
+      "shared": false,
+      "states": [{
+         "key": "permDashboardTime_dashboard_3aab01e9-25b5-40f5-bdef-bb3d90bef44b",
+         "value": "o%3AdateRange%3Ds%253Alast10Minutes%5EdateRangeText%3Ds%253A10M"
+      }],
+      "temporary": false,
+      "userId": "202a050e-c178-47f9-8cc7-2046c9318f6d",
+      "widgetInteractions": [
+         {
+            "type": "resourceId",
+            "widgetIdProvider": "1757480d-5cd8-491e-b57f-b0afa5477a90",
+            "widgetIdReceiver": "3b0f680a-edb3-4d35-b5cf-949880c4ad62"
+         },
+         {
+            "type": "resourceId",
+            "widgetIdProvider": "3b0f680a-edb3-4d35-b5cf-949880c4ad62",
+            "widgetIdReceiver": "2f3f8c29-4c65-4ab9-a4e7-fb32d744d27d"
+         },
+         {
+            "type": "resourceId",
+            "widgetIdProvider": "2f3f8c29-4c65-4ab9-a4e7-fb32d744d27d",
+            "widgetIdReceiver": "dc131856-e174-437b-bc73-03b0d244efcf"
+         },
+         {
+            "type": "resourceId",
+            "widgetIdProvider": "2f3f8c29-4c65-4ab9-a4e7-fb32d744d27d",
+            "widgetIdReceiver": "ab322369-b17e-41f7-a940-1b6774dd5c2f"
+         },
+         {
+            "type": "resourceId",
+            "widgetIdProvider": "2f3f8c29-4c65-4ab9-a4e7-fb32d744d27d",
+            "widgetIdReceiver": "44cf4d85-b0e8-453d-834e-ffb04fd54bc8"
+         },
+         {
+            "type": "resourceId",
+            "widgetIdProvider": "2f3f8c29-4c65-4ab9-a4e7-fb32d744d27d",
+            "widgetIdReceiver": "d3db80c2-dc68-471f-9863-101dd7c37e29"
+         },
+         {
+            "type": "resourceId",
+            "widgetIdProvider": "3b0f680a-edb3-4d35-b5cf-949880c4ad62",
+            "widgetIdReceiver": "4c56baea-94e0-4f6a-a396-81863c3bfb67"
+         },
+         {
+            "type": "resourceId",
+            "widgetIdProvider": "2f3f8c29-4c65-4ab9-a4e7-fb32d744d27d",
+            "widgetIdReceiver": "33fd62d7-ddf1-4c44-b948-ecfc3ab7d421"
+         },
+         {
+            "type": "resourceId",
+            "widgetIdProvider": "3b0f680a-edb3-4d35-b5cf-949880c4ad62",
+            "widgetIdReceiver": "3a0a88ee-0bb4-41f8-a2c8-22d3eb62ab05"
+         }
+      ],
+      "widgets": [
+         {
+            "collapsed": false,
+            "config": {
+               "customFilter": {
+                  "excludedResources": null,
+                  "filter": [
+                     {
+                        "filterTypes": [{
+                           "condition": "CONTAINS",
+                           "filterType": "properties",
+                           "metricKey": "configuration|wpConfiguration|wpEnabled",
+                           "metricValue": {
+                              "isStringMetric": true,
+                              "value": "true"
+                           }
+                        }],
+                        "resourceKind": "002006VMWAREClusterComputeResource"
+                     },
+                     {
+                        "filterTypes": [{
+                           "condition": "EQUALS",
+                           "filterType": "resourceName",
+                           "resourceName": "Namespaces"
+                        }],
+                        "resourceKind": "002006VMWAREResourcePool"
+                     },
+                     {
+                        "filterTypes": [{
+                           "condition": "GREATER_THAN",
+                           "filterType": "metrics",
+                           "metricKey": "summary|total_number_pods",
+                           "metricValue": {
+                              "isStringMetric": false,
+                              "value": 0
+                           }
+                        }],
+                        "resourceKind": "002006VMWAREDatacenter"
+                     },
+                     {
+                        "filterTypes": [{
+                           "condition": "GREATER_THAN",
+                           "filterType": "metrics",
+                           "metricKey": "summary|total_number_pods",
+                           "metricValue": {
+                              "isStringMetric": false,
+                              "value": 0
+                           }
+                        }],
+                        "resourceKind": "002006VMWAREVMwareAdapter Instance"
+                     },
+                     {
+                        "filterTypes": [{
+                           "condition": "EQUALS",
+                           "filterType": "properties",
+                           "metricKey": "summary|config|type",
+                           "metricValue": {
+                              "isStringMetric": true,
+                              "value": "SupervisorControlPlane"
+                           }
+                        }],
+                        "resourceKind": "002006VMWAREVirtualMachine"
+                     },
+                     {
+                        "filterTypes": [{
+                           "condition": "EQUALS",
+                           "filterType": "properties",
+                           "metricKey": "summary|config|type",
+                           "metricValue": {
+                              "isStringMetric": true,
+                              "value": "VMOperator"
+                           }
+                        }],
+                        "resourceKind": "002006VMWAREVirtualMachine"
+                     },
+                     {
+                        "filterTypes": [{
+                           "condition": "GREATER_THAN",
+                           "filterType": "metrics",
+                           "metricKey": "summary|numberDeveloperManagedVMs",
+                           "metricValue": {
+                              "isStringMetric": false,
+                              "value": 0
+                           }
+                        }],
+                        "resourceKind": "002006VMWAREVMwareAdapter Instance"
+                     },
+                     {
+                        "filterTypes": [{
+                           "condition": "GREATER_THAN",
+                           "filterType": "metrics",
+                           "metricKey": "summary|numberDeveloperManagedVMs",
+                           "metricValue": {
+                              "isStringMetric": false,
+                              "value": 0
+                           }
+                        }],
+                        "resourceKind": "002006VMWAREDatacenter"
+                     }
+                  ],
+                  "includedResources": null
+               },
+               "depth": "2,5",
+               "filterMode": "tagPicker",
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "resourceId": "resource:id:0_::_",
+               "resourceName": "vSphere World",
+               "selfProvider": {"selfProvider": true},
+               "tagFilter": {
+                  "path": [
+                     "/source/kind/kind:resourceKind:id:0_::_",
+                     "/source/kind/kind:resourceKind:id:1_::_",
+                     "/source/kind/kind:resourceKind:id:2_::_",
+                     "/source/kind/kind:resourceKind:id:3_::_",
+                     "/source/kind/kind:resourceKind:id:4_::_",
+                     "/source/kind/kind:resourceKind:id:5_::_",
+                     "/source/kind/kind:resourceKind:id:6_::_",
+                     "/source/kind/kind:resourceKind:id:7_::_",
+                     "/source/kind/kind:resourceKind:id:8_::_",
+                     "/source/kind/kind:resourceKind:id:9_::_"
+                  ],
+                  "value": {
+                     "adapterInstance": [],
+                     "adapterKind": [],
+                     "bus": [],
+                     "collector": [],
+                     "day": [],
+                     "exclaim": false,
+                     "healthRange": [],
+                     "kind": [
+                        "resourceKind:id:0_::_",
+                        "resourceKind:id:1_::_",
+                        "resourceKind:id:2_::_",
+                        "resourceKind:id:3_::_",
+                        "resourceKind:id:4_::_",
+                        "resourceKind:id:5_::_",
+                        "resourceKind:id:6_::_",
+                        "resourceKind:id:7_::_",
+                        "resourceKind:id:8_::_",
+                        "resourceKind:id:9_::_"
+                     ],
+                     "maintenanceSchedule": [],
+                     "state": [],
+                     "status": [],
+                     "tag": [],
+                     "tier": []
+                  }
+               },
+               "title": "Relationships",
+               "traversalSpecId": "vSphere Hosts and Clusters-VMWARE-vSphere World"
+            },
+            "gridsterCoords": {
+               "h": 5,
+               "w": 12,
+               "x": 1,
+               "y": 1
+            },
+            "height": 267,
+            "id": "1757480d-5cd8-491e-b57f-b0afa5477a90",
+            "states": [
+               {
+                  "key": "perm_viewerType_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_1757480d-5cd8-491e-b57f-b0afa5477a90",
+                  "value": "s%3ArelationshipTree"
+               },
+               {
+                  "key": "perm_ResourceRelationshipViewer_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_1757480d-5cd8-491e-b57f-b0afa5477a90",
+                  "value": "o%3A"
+               },
+               {
+                  "key": "perm_ResourceRelationshipTree_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_1757480d-5cd8-491e-b57f-b0afa5477a90",
+                  "value": "o%3A"
+               },
+               {
+                  "key": "perm_toolbarVisible_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_1757480d-5cd8-491e-b57f-b0afa5477a90",
+                  "value": "b%3A1"
+               }
+            ],
+            "title": "Relationships",
+            "type": "ResourceRelationshipAdvanced"
+         },
+         {
+            "collapsed": false,
+            "config": {
+               "chartViewItems": [],
+               "isUpdatedView": true,
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "resource": null,
+               "selectFirstRow": {"selectFirstRow": true},
+               "selfProvider": {"selfProvider": false},
+               "title": "Supervisor Clusters",
+               "traversalSpecId": "",
+               "viewDefinitionId": "f32cb26e-cec7-4960-bb99-903951304240"
+            },
+            "gridsterCoords": {
+               "h": 4,
+               "w": 12,
+               "x": 1,
+               "y": 6
+            },
+            "height": 209,
+            "id": "3b0f680a-edb3-4d35-b5cf-949880c4ad62",
+            "states": [{
+               "key": "permSelectedDate_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_3b0f680a-edb3-4d35-b5cf-949880c4ad62",
+               "value": "s%3A%7B%22minType%22%3A%22.TimeIntervalControl%22%2C%22advancedTimeMode%22%3Afalse%2C%22fromTime%22%3Anull%2C%22unit%22%3A%22DAYS%22%2C%22count%22%3A7%2C%22priorUnit%22%3Anull%2C%22priorCount%22%3Anull%2C%22startSubUnit%22%3Anull%2C%22startPeriod%22%3Anull%2C%22toTime%22%3Anull%2C%22endUnit%22%3Anull%2C%22endCount%22%3Anull%2C%22endSubUnit%22%3Anull%2C%22endPeriod%22%3Anull%7D"
+            }],
+            "title": "Supervisor Clusters",
+            "type": "View"
+         },
+         {
+            "collapsed": false,
+            "config": {
+               "chartViewItems": [],
+               "isUpdatedView": true,
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "resource": null,
+               "selectFirstRow": {"selectFirstRow": true},
+               "selfProvider": {"selfProvider": false},
+               "title": "Namespaces in this vSphere Cluster",
+               "traversalSpecId": "",
+               "viewDefinitionId": "c1ac4805-4b9a-4107-9a55-8e7a57460815"
+            },
+            "gridsterCoords": {
+               "h": 5,
+               "w": 12,
+               "x": 1,
+               "y": 16
+            },
+            "height": 267,
+            "id": "2f3f8c29-4c65-4ab9-a4e7-fb32d744d27d",
+            "states": [{
+               "key": "permSelectedDate_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_2f3f8c29-4c65-4ab9-a4e7-fb32d744d27d",
+               "value": "s%3A%7B%22minType%22%3A%22.TimeIntervalControl%22%2C%22advancedTimeMode%22%3Afalse%2C%22fromTime%22%3Anull%2C%22unit%22%3A%22DAYS%22%2C%22count%22%3A7%2C%22priorUnit%22%3Anull%2C%22priorCount%22%3Anull%2C%22startSubUnit%22%3Anull%2C%22startPeriod%22%3Anull%2C%22toTime%22%3Anull%2C%22endUnit%22%3Anull%2C%22endCount%22%3Anull%2C%22endSubUnit%22%3Anull%2C%22endPeriod%22%3Anull%7D"
+            }],
+            "title": "Namespaces in this vSphere Cluster",
+            "type": "View"
+         },
+         {
+            "collapsed": false,
+            "config": {
+               "chartViewItems": [],
+               "isUpdatedView": true,
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "resource": null,
+               "selectFirstRow": {"selectFirstRow": false},
+               "selfProvider": {"selfProvider": false},
+               "title": "Developer Managed VMs in this namespace",
+               "traversalSpecId": "",
+               "viewDefinitionId": "20c3ec1e-80d6-479d-a243-201053196bf5"
+            },
+            "gridsterCoords": {
+               "h": 4,
+               "w": 12,
+               "x": 1,
+               "y": 37
+            },
+            "height": 209,
+            "id": "ab322369-b17e-41f7-a940-1b6774dd5c2f",
+            "title": "Developer Managed VMs in this namespace",
+            "type": "View"
+         },
+         {
+            "collapsed": false,
+            "config": {
+               "chartViewItems": [],
+               "isUpdatedView": true,
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "resource": null,
+               "selectFirstRow": {"selectFirstRow": false},
+               "selfProvider": {"selfProvider": false},
+               "title": "Tanzu Kubernetes clusters in this namespace",
+               "traversalSpecId": "",
+               "viewDefinitionId": "c87f1895-57d4-4ce5-9141-6a07ce15ff8a"
+            },
+            "gridsterCoords": {
+               "h": 4,
+               "w": 12,
+               "x": 1,
+               "y": 33
+            },
+            "height": 209,
+            "id": "dc131856-e174-437b-bc73-03b0d244efcf",
+            "states": [{
+               "key": "permSelectedDate_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_dc131856-e174-437b-bc73-03b0d244efcf",
+               "value": "s%3A%7B%22minType%22%3A%22.TimeIntervalControl%22%2C%22advancedTimeMode%22%3Afalse%2C%22fromTime%22%3Anull%2C%22unit%22%3A%22DAYS%22%2C%22count%22%3A7%2C%22priorUnit%22%3Anull%2C%22priorCount%22%3Anull%2C%22startSubUnit%22%3Anull%2C%22startPeriod%22%3Anull%2C%22toTime%22%3Anull%2C%22endUnit%22%3Anull%2C%22endCount%22%3Anull%2C%22endSubUnit%22%3Anull%2C%22endPeriod%22%3Anull%7D"
+            }],
+            "title": "Tanzu Kubernetes clusters in this namespace",
+            "type": "View"
+         },
+         {
+            "collapsed": false,
+            "config": {
+               "chartViewItems": [],
+               "isUpdatedView": true,
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "resource": null,
+               "selectFirstRow": {"selectFirstRow": false},
+               "selfProvider": {"selfProvider": false},
+               "title": "Pods in this namespace",
+               "traversalSpecId": "",
+               "viewDefinitionId": "d5e8ac39-9c7d-4505-897e-dcedcfd4cc73"
+            },
+            "gridsterCoords": {
+               "h": 12,
+               "w": 6,
+               "x": 1,
+               "y": 21
+            },
+            "height": 665,
+            "id": "44cf4d85-b0e8-453d-834e-ffb04fd54bc8",
+            "title": "Pods in this namespace",
+            "type": "View"
+         },
+         {
+            "collapsed": false,
+            "config": {
+               "configs": [{
+                  "attributeKind": {
+                     "id": "cpu|usagemhz_average",
+                     "value": "CPU|Usage (MHz)"
+                  },
+                  "attributePaths": ["/root/allMetricsRoot/GROUP_cpu/cpu|usagemhz_average"],
+                  "color": {"thresholds": {
+                     "colors": [
+                        "#00ff00",
+                        "#888800",
+                        "#ff0000"
+                     ],
+                     "values": [
+                        0,
+                        50,
+                        100
+                     ]
+                  }},
+                  "colorBy": {"value": ""},
+                  "filterMode": "tagPicker",
+                  "focusOnGroups": true,
+                  "groupBy": {
+                     "id": "004null002006VMWARENamespace",
+                     "originalText": "Namespace",
+                     "parentId": "VMWARE",
+                     "parentText": "vCenter Adapter",
+                     "text": "Namespace",
+                     "type": "resourceKind",
+                     "typeId": "resourceKind:id:6_::_"
+                  },
+                  "mode": {"mode": true},
+                  "name": "CPU usage by namespace",
+                  "relationalGrouping": false,
+                  "resourceKind": "resourceKind:id:6_::_",
+                  "sizeBy": {"value": ""},
+                  "solidColoring": false,
+                  "thenBy": null
+               }],
+               "depth": 10,
+               "mode": "all",
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "relationshipMode": {"relationshipMode": [
+                  1,
+                  -1,
+                  0
+               ]},
+               "resource": [],
+               "selfProvider": {"selfProvider": false},
+               "title": "CPU usage in MHz by namespace in this vSphere cluster",
+               "value": 0
+            },
+            "gridsterCoords": {
+               "h": 6,
+               "w": 6,
+               "x": 1,
+               "y": 10
+            },
+            "height": 324,
+            "id": "4c56baea-94e0-4f6a-a396-81863c3bfb67",
+            "states": [{
+               "key": "perm_HeatMap_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_4c56baea-94e0-4f6a-a396-81863c3bfb67",
+               "value": "o%3A"
+            }],
+            "title": "CPU usage in MHz by namespace in this vSphere cluster",
+            "type": "Heatmap"
+         },
+         {
+            "collapsed": false,
+            "config": {
+               "configs": [{
+                  "attributeKind": {
+                     "id": "mem|consumed_average",
+                     "value": "Memory|Consumed (KB)"
+                  },
+                  "attributePaths": ["/root/allMetricsRoot/GROUP_mem/mem|consumed_average"],
+                  "color": {"thresholds": {
+                     "colors": [
+                        "#00ff00",
+                        "#888800",
+                        "#ff0000"
+                     ],
+                     "values": [
+                        0,
+                        50,
+                        100
+                     ]
+                  }},
+                  "colorBy": {"value": ""},
+                  "filterMode": "tagPicker",
+                  "focusOnGroups": true,
+                  "groupBy": {
+                     "id": "004null002006VMWARENamespace",
+                     "originalText": "Namespace",
+                     "parentId": "VMWARE",
+                     "parentText": "vCenter Adapter",
+                     "text": "Namespace",
+                     "type": "resourceKind",
+                     "typeId": "resourceKind:id:6_::_"
+                  },
+                  "mode": {"mode": true},
+                  "name": "MEM usage by namespace",
+                  "relationalGrouping": false,
+                  "resourceKind": "resourceKind:id:6_::_",
+                  "sizeBy": {"value": ""},
+                  "solidColoring": false,
+                  "thenBy": null
+               }],
+               "depth": 10,
+               "mode": "all",
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "relationshipMode": {"relationshipMode": [
+                  1,
+                  -1,
+                  0
+               ]},
+               "resource": [],
+               "selfProvider": {"selfProvider": false},
+               "title": "MEM usage in KB by namespace  in this vSphere cluster",
+               "value": 0
+            },
+            "gridsterCoords": {
+               "h": 6,
+               "w": 6,
+               "x": 7,
+               "y": 10
+            },
+            "height": 324,
+            "id": "3a0a88ee-0bb4-41f8-a2c8-22d3eb62ab05",
+            "states": [{
+               "key": "perm_HeatMap_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_3a0a88ee-0bb4-41f8-a2c8-22d3eb62ab05",
+               "value": "o%3A"
+            }],
+            "title": "MEM usage in KB by namespace  in this vSphere cluster",
+            "type": "Heatmap"
+         },
+         {
+            "collapsed": false,
+            "config": {
+               "configs": [{
+                  "attributeKind": {
+                     "id": "mem|consumed_average",
+                     "value": "Memory|Consumed (KB)"
+                  },
+                  "attributePaths": ["/root/allMetricsRoot/GROUP_mem/mem|consumed_average"],
+                  "color": {"thresholds": {
+                     "colors": [
+                        "#00ff00",
+                        "#888800",
+                        "#ff0000"
+                     ],
+                     "values": [
+                        0,
+                        50,
+                        100
+                     ]
+                  }},
+                  "colorBy": {"value": ""},
+                  "filterMode": "tagPicker",
+                  "focusOnGroups": true,
+                  "groupBy": {
+                     "id": "004null002006VMWAREPod",
+                     "originalText": "Pod",
+                     "parentId": "VMWARE",
+                     "parentText": "vCenter Adapter",
+                     "text": "Pod",
+                     "type": "resourceKind",
+                     "typeId": "resourceKind:id:8_::_"
+                  },
+                  "mode": {"mode": true},
+                  "name": "CPU usage by vSphere Pod",
+                  "relationalGrouping": false,
+                  "resourceKind": "resourceKind:id:8_::_",
+                  "sizeBy": {"value": ""},
+                  "solidColoring": false,
+                  "thenBy": null
+               }],
+               "depth": 10,
+               "mode": "all",
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "relationshipMode": {"relationshipMode": [
+                  -1,
+                  0
+               ]},
+               "resource": [],
+               "selfProvider": {"selfProvider": false},
+               "title": "MEM usage by vSphere pod in this namespace",
+               "value": 0
+            },
+            "gridsterCoords": {
+               "h": 6,
+               "w": 6,
+               "x": 7,
+               "y": 27
+            },
+            "height": 324,
+            "id": "d3db80c2-dc68-471f-9863-101dd7c37e29",
+            "states": [{
+               "key": "perm_HeatMap_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_d3db80c2-dc68-471f-9863-101dd7c37e29",
+               "value": "o%3A"
+            }],
+            "title": "MEM usage by vSphere pod in this namespace",
+            "type": "Heatmap"
+         },
+         {
+            "collapsed": false,
+            "config": {
+               "configs": [{
+                  "attributeKind": {
+                     "id": "cpu|usage.vcpus_average",
+                     "value": "CPU|usage.vcpus_average"
+                  },
+                  "attributePaths": ["/root/allMetricsRoot/GROUP_cpu/cpu|usage.vcpus_average"],
+                  "color": {"thresholds": {
+                     "colors": [
+                        "#00ff00",
+                        "#888800",
+                        "#ff0000"
+                     ],
+                     "values": [
+                        0,
+                        50,
+                        100
+                     ]
+                  }},
+                  "colorBy": {"value": ""},
+                  "filterMode": "tagPicker",
+                  "focusOnGroups": true,
+                  "groupBy": {
+                     "id": "004null002006VMWAREPod",
+                     "originalText": "Pod",
+                     "parentId": "VMWARE",
+                     "parentText": "vCenter Adapter",
+                     "text": "Pod",
+                     "type": "resourceKind",
+                     "typeId": "resourceKind:id:8_::_"
+                  },
+                  "mode": {"mode": true},
+                  "name": "CPU usage by vSphere Pod",
+                  "relationalGrouping": false,
+                  "resourceKind": "resourceKind:id:8_::_",
+                  "sizeBy": {"value": ""},
+                  "solidColoring": false,
+                  "thenBy": null
+               }],
+               "depth": 10,
+               "mode": "all",
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "relationshipMode": {"relationshipMode": [
+                  -1,
+                  0
+               ]},
+               "resource": [],
+               "selfProvider": {"selfProvider": false},
+               "title": "CPU usage by vSphere pod in this namespace",
+               "value": 0
+            },
+            "gridsterCoords": {
+               "h": 6,
+               "w": 6,
+               "x": 7,
+               "y": 21
+            },
+            "height": 324,
+            "id": "33fd62d7-ddf1-4c44-b948-ecfc3ab7d421",
+            "states": [{
+               "key": "perm_HeatMap_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_33fd62d7-ddf1-4c44-b948-ecfc3ab7d421",
+               "value": "o%3A"
+            }],
+            "title": "CPU usage by vSphere pod in this namespace",
+            "type": "Heatmap"
+         }
+      ]
+   }],
+   "entries": {
+      "resource": [{
+         "adapterKindKey": "VMWARE",
+         "identifiers": [],
+         "internalId": "resource:id:0_::_",
+         "name": "vSphere World",
+         "resourceKindKey": "vSphere World"
+      }],
+      "resourceKind": [
+         {
+            "adapterKindKey": "VMWARE",
+            "internalId": "resourceKind:id:1_::_",
+            "resourceKindKey": "DistributedVirtualPortgroup"
+         },
+         {
+            "adapterKindKey": "VMWARE",
+            "internalId": "resourceKind:id:4_::_",
+            "resourceKindKey": "GuestCluster"
+         },
+         {
+            "adapterKindKey": "VMWARE",
+            "internalId": "resourceKind:id:7_::_",
+            "resourceKindKey": "Datacenter"
+         },
+         {
+            "adapterKindKey": "VMWARE",
+            "internalId": "resourceKind:id:3_::_",
+            "resourceKindKey": "VMwareAdapter Instance"
+         },
+         {
+            "adapterKindKey": "VMWARE",
+            "internalId": "resourceKind:id:5_::_",
+            "resourceKindKey": "VirtualMachine"
+         },
+         {
+            "adapterKindKey": "VMWARE",
+            "internalId": "resourceKind:id:6_::_",
+            "resourceKindKey": "Namespace"
+         },
+         {
+            "adapterKindKey": "VMWARE",
+            "internalId": "resourceKind:id:2_::_",
+            "resourceKindKey": "ClusterComputeResource"
+         },
+         {
+            "adapterKindKey": "VMWARE",
+            "internalId": "resourceKind:id:9_::_",
+            "resourceKindKey": "ResourcePool"
+         },
+         {
+            "adapterKindKey": "VMWARE",
+            "internalId": "resourceKind:id:8_::_",
+            "resourceKindKey": "Pod"
+         },
+         {
+            "adapterKindKey": "VMWARE",
+            "internalId": "resourceKind:id:0_::_",
+            "resourceKindKey": "VmwareDistributedVirtualSwitch"
+         }
+      ]
+   },
+   "uuid": "389b3765-70ef-4ea1-afd7-a3eb108b37af"
+}

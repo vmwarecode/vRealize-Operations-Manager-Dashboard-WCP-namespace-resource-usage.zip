@@ -1,0 +1,20 @@
+# vRealize Operations Manager Dashboard - WCP namespace resource overview
+Released in 2020 by Dominik Zorgnotti under MIT license
+
+## How to import 
+1. Import the View
+2. Import the Dashboard
+
+## Reason
+Once a cluster is enabled with the Workload Platform, you may want to identify the resource demand created by vSphere pods and Tanzu Kubernetes Clusters in your vSphere infrastructure. 
+Kudos to Christian Dickmann, his request triggered the idea to build this dashboard.
+
+## What the Dashboard shows
+This dashboard show you the resource usage starting from namespaces down to pods. 
+It uses the "Relationships" from the "Workload Management Inventory" dashboard to get a similar look and feel.
+
+## How to use the Dashboard
+Start by selecting your WCP-enabled vSphere cluster, then drill down to namespaces and pods.
+
+## Disclaimer
+This dashboard was build with vRealize Operations 8.1. It is an early v1 version but should get the job done!
