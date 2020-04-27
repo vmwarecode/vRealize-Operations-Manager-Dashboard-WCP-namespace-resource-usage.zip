@@ -14,7 +14,7 @@
       "id": "3aab01e9-25b5-40f5-bdef-bb3d90bef44b",
       "importAttempts": 0,
       "importComplete": true,
-      "lastUpdateTime": 1587726659809,
+      "lastUpdateTime": 1588000611587,
       "lastUpdateUserId": "202a050e-c178-47f9-8cc7-2046c9318f6d",
       "locked": false,
       "name": "WCP: Resource overview by namespace",
@@ -46,11 +46,6 @@
          {
             "type": "resourceId",
             "widgetIdProvider": "2f3f8c29-4c65-4ab9-a4e7-fb32d744d27d",
-            "widgetIdReceiver": "ab322369-b17e-41f7-a940-1b6774dd5c2f"
-         },
-         {
-            "type": "resourceId",
-            "widgetIdProvider": "2f3f8c29-4c65-4ab9-a4e7-fb32d744d27d",
             "widgetIdReceiver": "44cf4d85-b0e8-453d-834e-ffb04fd54bc8"
          },
          {
@@ -72,6 +67,21 @@
             "type": "resourceId",
             "widgetIdProvider": "3b0f680a-edb3-4d35-b5cf-949880c4ad62",
             "widgetIdReceiver": "3a0a88ee-0bb4-41f8-a2c8-22d3eb62ab05"
+         },
+         {
+            "type": "resourceId",
+            "widgetIdProvider": "dc131856-e174-437b-bc73-03b0d244efcf",
+            "widgetIdReceiver": "ab322369-b17e-41f7-a940-1b6774dd5c2f"
+         },
+         {
+            "type": "resourceId",
+            "widgetIdProvider": "2f3f8c29-4c65-4ab9-a4e7-fb32d744d27d",
+            "widgetIdReceiver": "ebd4bdb1-a758-410a-a192-8cef2a5c38cc"
+         },
+         {
+            "type": "resourceId",
+            "widgetIdProvider": "2f3f8c29-4c65-4ab9-a4e7-fb32d744d27d",
+            "widgetIdReceiver": "41606d9a-34dd-4433-8242-d8600cabea97"
          }
       ],
       "widgets": [
@@ -265,7 +275,7 @@
                "resource": null,
                "selectFirstRow": {"selectFirstRow": true},
                "selfProvider": {"selfProvider": false},
-               "title": "Supervisor Clusters",
+               "title": "Workload-enabled vSphere cluster",
                "traversalSpecId": "",
                "viewDefinitionId": "f32cb26e-cec7-4960-bb99-903951304240"
             },
@@ -281,7 +291,7 @@
                "key": "permSelectedDate_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_3b0f680a-edb3-4d35-b5cf-949880c4ad62",
                "value": "s%3A%7B%22minType%22%3A%22.TimeIntervalControl%22%2C%22advancedTimeMode%22%3Afalse%2C%22fromTime%22%3Anull%2C%22unit%22%3A%22DAYS%22%2C%22count%22%3A7%2C%22priorUnit%22%3Anull%2C%22priorCount%22%3Anull%2C%22startSubUnit%22%3Anull%2C%22startPeriod%22%3Anull%2C%22toTime%22%3Anull%2C%22endUnit%22%3Anull%2C%22endCount%22%3Anull%2C%22endSubUnit%22%3Anull%2C%22endPeriod%22%3Anull%7D"
             }],
-            "title": "Supervisor Clusters",
+            "title": "Workload-enabled vSphere cluster",
             "type": "View"
          },
          {
@@ -323,19 +333,19 @@
                "resource": null,
                "selectFirstRow": {"selectFirstRow": false},
                "selfProvider": {"selfProvider": false},
-               "title": "Developer Managed VMs in this namespace",
+               "title": "Developer Managed VMs in this Tanzu Kubernetes Cluster",
                "traversalSpecId": "",
-               "viewDefinitionId": "20c3ec1e-80d6-479d-a243-201053196bf5"
+               "viewDefinitionId": "c9f0cc74-3c90-4913-a579-0bca81dab38e"
             },
             "gridsterCoords": {
                "h": 4,
                "w": 12,
                "x": 1,
-               "y": 37
+               "y": 45
             },
             "height": 209,
             "id": "ab322369-b17e-41f7-a940-1b6774dd5c2f",
-            "title": "Developer Managed VMs in this namespace",
+            "title": "Developer Managed VMs in this Tanzu Kubernetes Cluster",
             "type": "View"
          },
          {
@@ -350,15 +360,15 @@
                "selfProvider": {"selfProvider": false},
                "title": "Tanzu Kubernetes clusters in this namespace",
                "traversalSpecId": "",
-               "viewDefinitionId": "c87f1895-57d4-4ce5-9141-6a07ce15ff8a"
+               "viewDefinitionId": "d81a0e39-8446-4e62-a29a-fcfe2699c9aa"
             },
             "gridsterCoords": {
-               "h": 4,
-               "w": 12,
+               "h": 12,
+               "w": 6,
                "x": 1,
                "y": 33
             },
-            "height": 209,
+            "height": 665,
             "id": "dc131856-e174-437b-bc73-03b0d244efcf",
             "states": [{
                "key": "permSelectedDate_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_dc131856-e174-437b-bc73-03b0d244efcf",
@@ -669,6 +679,148 @@
             }],
             "title": "CPU usage by vSphere pod in this namespace",
             "type": "Heatmap"
+         },
+         {
+            "collapsed": false,
+            "config": {
+               "configs": [{
+                  "attributeKind": {
+                     "id": "mem|consumed_average",
+                     "value": "Memory|Consumed (KB)"
+                  },
+                  "attributePaths": ["/root/allMetricsRoot/GROUP_mem/mem|consumed_average"],
+                  "color": {"thresholds": {
+                     "colors": [
+                        "#00ff00",
+                        "#888800",
+                        "#ff0000"
+                     ],
+                     "values": [
+                        0,
+                        50,
+                        100
+                     ]
+                  }},
+                  "colorBy": {"value": ""},
+                  "filterMode": "tagPicker",
+                  "focusOnGroups": true,
+                  "groupBy": {
+                     "id": "004null002006VMWAREGuestCluster",
+                     "originalText": "Tanzu Kubernetes cluster",
+                     "parentId": "VMWARE",
+                     "parentText": "vCenter Adapter",
+                     "text": "Tanzu Kubernetes cluster",
+                     "type": "resourceKind",
+                     "typeId": "resourceKind:id:4_::_"
+                  },
+                  "id": "extModel48150-1",
+                  "mode": {"mode": true},
+                  "name": "MEM usage by Tanzu Kubernetes Cluster in this namespace",
+                  "relationalGrouping": false,
+                  "resourceKind": "resourceKind:id:4_::_",
+                  "sizeBy": {"value": ""},
+                  "solidColoring": false,
+                  "thenBy": null
+               }],
+               "depth": 10,
+               "mode": "all",
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "relationshipMode": {"relationshipMode": [
+                  1,
+                  -1,
+                  0
+               ]},
+               "resource": [],
+               "selfProvider": {"selfProvider": false},
+               "title": "MEM usage by Tanzu Kubernetes Cluster in this namespace",
+               "value": 0
+            },
+            "gridsterCoords": {
+               "h": 6,
+               "w": 6,
+               "x": 7,
+               "y": 39
+            },
+            "height": 324,
+            "id": "ebd4bdb1-a758-410a-a192-8cef2a5c38cc",
+            "states": [{
+               "key": "perm_HeatMap_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_ebd4bdb1-a758-410a-a192-8cef2a5c38cc",
+               "value": "o%3A"
+            }],
+            "title": "MEM usage by Tanzu Kubernetes Cluster in this namespace",
+            "type": "Heatmap"
+         },
+         {
+            "collapsed": false,
+            "config": {
+               "configs": [{
+                  "attributeKind": {
+                     "id": "cpu|usagemhz_average",
+                     "value": "CPU|Usage (MHz)"
+                  },
+                  "attributePaths": ["/root/allMetricsRoot/GROUP_cpu/cpu|usagemhz_average"],
+                  "color": {"thresholds": {
+                     "colors": [
+                        "#00ff00",
+                        "#888800",
+                        "#ff0000"
+                     ],
+                     "values": [
+                        0,
+                        50,
+                        100
+                     ]
+                  }},
+                  "colorBy": {"value": ""},
+                  "filterMode": "tagPicker",
+                  "focusOnGroups": true,
+                  "groupBy": {
+                     "id": "004null002006VMWAREGuestCluster",
+                     "originalText": "Tanzu Kubernetes cluster",
+                     "parentId": "VMWARE",
+                     "parentText": "vCenter Adapter",
+                     "text": "Tanzu Kubernetes cluster",
+                     "type": "resourceKind",
+                     "typeId": "resourceKind:id:4_::_"
+                  },
+                  "id": "extModel48598-1",
+                  "mode": {"mode": true},
+                  "name": "CPU usage by Tanzu Kubernetes Cluster in this namespace",
+                  "relationalGrouping": false,
+                  "resourceKind": "resourceKind:id:4_::_",
+                  "sizeBy": {"value": ""},
+                  "solidColoring": false,
+                  "thenBy": null
+               }],
+               "depth": 10,
+               "mode": "all",
+               "refreshContent": {"refreshContent": false},
+               "refreshInterval": 300,
+               "relationshipMode": {"relationshipMode": [
+                  1,
+                  -1,
+                  0
+               ]},
+               "resource": [],
+               "selfProvider": {"selfProvider": false},
+               "title": "CPU usage by Tanzu Kubernetes Cluster in this namespace",
+               "value": 0
+            },
+            "gridsterCoords": {
+               "h": 6,
+               "w": 6,
+               "x": 7,
+               "y": 33
+            },
+            "height": 324,
+            "id": "41606d9a-34dd-4433-8242-d8600cabea97",
+            "states": [{
+               "key": "perm_HeatMap_widget_3aab01e9-25b5-40f5-bdef-bb3d90bef44b_41606d9a-34dd-4433-8242-d8600cabea97",
+               "value": "o%3A"
+            }],
+            "title": "CPU usage by Tanzu Kubernetes Cluster in this namespace",
+            "type": "Heatmap"
          }
       ]
    }],
@@ -733,5 +885,5 @@
          }
       ]
    },
-   "uuid": "389b3765-70ef-4ea1-afd7-a3eb108b37af"
+   "uuid": "fc9d606c-4520-4417-ab39-ca096a87caea"
 }
